@@ -1,3 +1,7 @@
+<?php
+   require '/path/to/vendor/autoload.php';
+?>
+
 <html>
     <head>
         <title>Mega Portal</title>
