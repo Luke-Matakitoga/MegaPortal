@@ -1,13 +1,19 @@
 <?php
 include '/vendor/autoload.php';
-?>
 
-<html>
-    <head>
-        <title>Mega Portal</title>
-    </head>
-    <body>
-        <h1>Hello World</h1>
-        <h2><?php echo 3+3; ?></h2>
-    </body>
-</html>
+use Aws\S3\S3Client;
+
+
+$s3Client = new S3Client([
+    'profile' => 'default',
+    'region' => 'us-west-2',
+    'version' => '2006-03-01'
+]);
+
+//Listing all S3 Bucket
+$buckets = $s3Client->listBuckets();
+foreach ($buckets['Buckets'] as $bucket) {
+    echo $bucket['Name'] . "\n";
+}
+
+?>
