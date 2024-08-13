@@ -12,7 +12,7 @@ $s3Client = new S3Client([
         'key' => 'AKIAYS2NTXKO2Y7XFYOQ',
         'secret' => '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',
     ],
-    'region' => 'us-west-2',
+    'region' => 'eu-west-2',
     'version' => '2006-03-01'
 ]);
 
